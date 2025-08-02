@@ -1,0 +1,162 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\shadm\\Desktop\\Semister\\C#\\Hotel_Booking\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A16913C3-1579-4DB2-9DA2-3034113569E0}|..\\DAL\\DAL.csproj|c:\\users\\shadm\\desktop\\semister\\c#\\dal\\migrations\\202506251015234_initdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9509254-0F24-4698-B3B1-5FC1DF6CBEA6}|Hotel_Booking.csproj|C:\\Users\\shadm\\Desktop\\Semister\\C#\\Hotel_Booking\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{E9509254-0F24-4698-B3B1-5FC1DF6CBEA6}|Hotel_Booking.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A16913C3-1579-4DB2-9DA2-3034113569E0}|..\\DAL\\DAL.csproj|c:\\users\\shadm\\desktop\\semister\\c#\\dal\\empcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A16913C3-1579-4DB2-9DA2-3034113569E0}|..\\DAL\\DAL.csproj|c:\\users\\shadm\\desktop\\semister\\c#\\dal\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A16913C3-1579-4DB2-9DA2-3034113569E0}|..\\DAL\\DAL.csproj|c:\\users\\shadm\\desktop\\semister\\c#\\dal\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A16913C3-1579-4DB2-9DA2-3034113569E0}|..\\DAL\\DAL.csproj|c:\\users\\shadm\\desktop\\semister\\c#\\dal\\models\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A16913C3-1579-4DB2-9DA2-3034113569E0}|..\\DAL\\DAL.csproj|c:\\users\\shadm\\desktop\\semister\\c#\\dal\\repos\\employeerepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4B22511-E38B-445F-9526-C6EEE01FC225}|..\\BLL\\BLL.csproj|c:\\users\\shadm\\desktop\\semister\\c#\\bll\\service\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4B22511-E38B-445F-9526-C6EEE01FC225}|..\\BLL\\BLL.csproj|c:\\users\\shadm\\desktop\\semister\\c#\\bll\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "room.cs",
+              "DocumentMoniker": "C:\\Users\\shadm\\Desktop\\Semister\\C#\\DAL\\Models\\room.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\Models\\room.cs",
+              "ToolTip": "C:\\Users\\shadm\\Desktop\\Semister\\C#\\DAL\\Models\\room.cs",
+              "RelativeToolTip": "..\\DAL\\Models\\room.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T14:02:30.286Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EmployeeRepo.cs",
+              "DocumentMoniker": "C:\\Users\\shadm\\Desktop\\Semister\\C#\\DAL\\Repos\\EmployeeRepo.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\Repos\\EmployeeRepo.cs",
+              "ToolTip": "C:\\Users\\shadm\\Desktop\\Semister\\C#\\DAL\\Repos\\EmployeeRepo.cs",
+              "RelativeToolTip": "..\\DAL\\Repos\\EmployeeRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T10:36:27.606Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Configuration.cs",
+              "DocumentMoniker": "C:\\Users\\shadm\\Desktop\\Semister\\C#\\DAL\\Migrations\\Configuration.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\Migrations\\Configuration.cs",
+              "ToolTip": "C:\\Users\\shadm\\Desktop\\Semister\\C#\\DAL\\Migrations\\Configuration.cs",
+              "RelativeToolTip": "..\\DAL\\Migrations\\Configuration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T10:13:24.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\shadm\\Desktop\\Semister\\C#\\DAL\\Models\\Employee.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\Models\\Employee.cs",
+              "ToolTip": "C:\\Users\\shadm\\Desktop\\Semister\\C#\\DAL\\Models\\Employee.cs",
+              "RelativeToolTip": "..\\DAL\\Models\\Employee.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T09:53:16.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmpContext.cs",
+              "DocumentMoniker": "C:\\Users\\shadm\\Desktop\\Semister\\C#\\DAL\\EmpContext.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\EmpContext.cs",
+              "ToolTip": "C:\\Users\\shadm\\Desktop\\Semister\\C#\\DAL\\EmpContext.cs",
+              "RelativeToolTip": "..\\DAL\\EmpContext.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T09:44:35.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\shadm\\Desktop\\Semister\\C#\\Hotel_Booking\\Web.config",
+              "RelativeDocumentMoniker": "Web.config",
+              "ToolTip": "C:\\Users\\shadm\\Desktop\\Semister\\C#\\Hotel_Booking\\Web.config",
+              "RelativeToolTip": "Web.config",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-06-25T10:02:14.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "202506251015234_InitDb.cs",
+              "DocumentMoniker": "C:\\Users\\shadm\\Desktop\\Semister\\C#\\DAL\\Migrations\\202506251015234_InitDb.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\Migrations\\202506251015234_InitDb.cs",
+              "ToolTip": "C:\\Users\\shadm\\Desktop\\Semister\\C#\\DAL\\Migrations\\202506251015234_InitDb.cs",
+              "RelativeToolTip": "..\\DAL\\Migrations\\202506251015234_InitDb.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T10:16:09.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EmployeeService.cs",
+              "DocumentMoniker": "C:\\Users\\shadm\\Desktop\\Semister\\C#\\BLL\\Service\\EmployeeService.cs",
+              "RelativeDocumentMoniker": "..\\BLL\\Service\\EmployeeService.cs",
+              "ToolTip": "C:\\Users\\shadm\\Desktop\\Semister\\C#\\BLL\\Service\\EmployeeService.cs",
+              "RelativeToolTip": "..\\BLL\\Service\\EmployeeService.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAgwBAAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T11:10:00.078Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\shadm\\Desktop\\Semister\\C#\\BLL\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\BLL\\Class1.cs",
+              "ToolTip": "C:\\Users\\shadm\\Desktop\\Semister\\C#\\BLL\\Class1.cs",
+              "RelativeToolTip": "..\\BLL\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T09:44:07.384Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

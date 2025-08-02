@@ -1,0 +1,309 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\Hotel_management_system\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A9BB0860-A029-497F-A2D5-65B516BE1C05}|Hotel_management_system.csproj|c:\\users\\shadm\\desktop\\semister\\project\\hotel_management_system\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A9BB0860-A029-497F-A2D5-65B516BE1C05}|Hotel_management_system.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AAEC41E-E122-4B38-903F-59746FFF088E}|..\\DAL\\DAL.csproj|c:\\users\\shadm\\desktop\\semister\\project\\dal\\model\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AAEC41E-E122-4B38-903F-59746FFF088E}|..\\DAL\\DAL.csproj|c:\\users\\shadm\\desktop\\semister\\project\\dal\\repos\\guestrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AAEC41E-E122-4B38-903F-59746FFF088E}|..\\DAL\\DAL.csproj|c:\\users\\shadm\\desktop\\semister\\project\\dal\\hoteldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AAEC41E-E122-4B38-903F-59746FFF088E}|..\\DAL\\DAL.csproj|c:\\users\\shadm\\desktop\\semister\\project\\dal\\dataaccessfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AAEC41E-E122-4B38-903F-59746FFF088E}|..\\DAL\\DAL.csproj|c:\\users\\shadm\\desktop\\semister\\project\\dal\\model\\guest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AAEC41E-E122-4B38-903F-59746FFF088E}|..\\DAL\\DAL.csproj|c:\\users\\shadm\\desktop\\semister\\project\\dal\\model\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AAEC41E-E122-4B38-903F-59746FFF088E}|..\\DAL\\DAL.csproj|c:\\users\\shadm\\desktop\\semister\\project\\dal\\interfaces\\irepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AAEC41E-E122-4B38-903F-59746FFF088E}|..\\DAL\\DAL.csproj|c:\\users\\shadm\\desktop\\semister\\project\\dal\\repos\\roomrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9BB0860-A029-497F-A2D5-65B516BE1C05}|Hotel_management_system.csproj|C:\\Users\\shadm\\Desktop\\Semister\\Project\\Hotel_management_system\\controllers\\roomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9BB0860-A029-497F-A2D5-65B516BE1C05}|Hotel_management_system.csproj|solutionrelative:controllers\\roomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9BB0860-A029-497F-A2D5-65B516BE1C05}|Hotel_management_system.csproj|C:\\Users\\shadm\\Desktop\\Semister\\Project\\Hotel_management_system\\app_start\\webapiconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9BB0860-A029-497F-A2D5-65B516BE1C05}|Hotel_management_system.csproj|solutionrelative:app_start\\webapiconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{282AB96B-5AB8-4F06-9CEB-305F79B6D0AA}|..\\BLL\\BLL.csproj|c:\\users\\shadm\\desktop\\semister\\project\\bll\\dtos\\bookingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{282AB96B-5AB8-4F06-9CEB-305F79B6D0AA}|..\\BLL\\BLL.csproj|c:\\users\\shadm\\desktop\\semister\\project\\bll\\services\\roomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{282AB96B-5AB8-4F06-9CEB-305F79B6D0AA}|..\\BLL\\BLL.csproj|c:\\users\\shadm\\desktop\\semister\\project\\bll\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{282AB96B-5AB8-4F06-9CEB-305F79B6D0AA}|..\\BLL\\BLL.csproj|c:\\users\\shadm\\desktop\\semister\\project\\bll\\services\\guestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{282AB96B-5AB8-4F06-9CEB-305F79B6D0AA}|..\\BLL\\BLL.csproj|c:\\users\\shadm\\desktop\\semister\\project\\bll\\services\\bookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{282AB96B-5AB8-4F06-9CEB-305F79B6D0AA}|..\\BLL\\BLL.csproj|c:\\users\\shadm\\desktop\\semister\\project\\bll\\dtos\\roomdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{282AB96B-5AB8-4F06-9CEB-305F79B6D0AA}|..\\BLL\\BLL.csproj|c:\\users\\shadm\\desktop\\semister\\project\\bll\\dtos\\guestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AAEC41E-E122-4B38-903F-59746FFF088E}|..\\DAL\\DAL.csproj|c:\\users\\shadm\\desktop\\semister\\project\\dal\\repos\\bookingrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IRepo.cs",
+              "DocumentMoniker": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\DAL\\Interfaces\\IRepo.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\Interfaces\\IRepo.cs",
+              "ToolTip": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\DAL\\Interfaces\\IRepo.cs",
+              "RelativeToolTip": "..\\DAL\\Interfaces\\IRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T18:24:49.49Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RoomRepo.cs",
+              "DocumentMoniker": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\DAL\\Repos\\RoomRepo.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\Repos\\RoomRepo.cs",
+              "ToolTip": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\DAL\\Repos\\RoomRepo.cs",
+              "RelativeToolTip": "..\\DAL\\Repos\\RoomRepo.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAEAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T14:51:44.363Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Booking.cs",
+              "DocumentMoniker": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\DAL\\Model\\Booking.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\Model\\Booking.cs",
+              "ToolTip": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\DAL\\Model\\Booking.cs",
+              "RelativeToolTip": "..\\DAL\\Model\\Booking.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAzwCIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T17:42:29.366Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Room.cs",
+              "DocumentMoniker": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\DAL\\Model\\Room.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\Model\\Room.cs",
+              "ToolTip": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\DAL\\Model\\Room.cs",
+              "RelativeToolTip": "..\\DAL\\Model\\Room.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAwBoAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T14:33:47.89Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DataAccessFactory.cs",
+              "DocumentMoniker": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\DAL\\DataAccessFactory.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\DataAccessFactory.cs",
+              "ToolTip": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\DAL\\DataAccessFactory.cs",
+              "RelativeToolTip": "..\\DAL\\DataAccessFactory.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T21:12:49.638Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HotelDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\DAL\\HotelDbContext.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\HotelDbContext.cs",
+              "ToolTip": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\DAL\\HotelDbContext.cs",
+              "RelativeToolTip": "..\\DAL\\HotelDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T14:32:07.916Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\Hotel_management_system\\Web.config",
+              "RelativeDocumentMoniker": "Web.config",
+              "ToolTip": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\Hotel_management_system\\Web.config",
+              "RelativeToolTip": "Web.config",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAEMAAABtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-06-25T14:37:44.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GuestRepo.cs",
+              "DocumentMoniker": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\DAL\\Repos\\GuestRepo.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\Repos\\GuestRepo.cs",
+              "ToolTip": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\DAL\\Repos\\GuestRepo.cs",
+              "RelativeToolTip": "..\\DAL\\Repos\\GuestRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T18:50:06.747Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "BookingService.cs",
+              "DocumentMoniker": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\BLL\\Services\\BookingService.cs",
+              "RelativeDocumentMoniker": "..\\BLL\\Services\\BookingService.cs",
+              "ToolTip": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\BLL\\Services\\BookingService.cs",
+              "RelativeToolTip": "..\\BLL\\Services\\BookingService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T19:20:14.092Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RoomController.cs",
+              "DocumentMoniker": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\Hotel_management_system\\Controllers\\RoomController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RoomController.cs",
+              "ToolTip": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\Hotel_management_system\\Controllers\\RoomController.cs",
+              "RelativeToolTip": "Controllers\\RoomController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAzwBgAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T15:26:57.667Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "GuestService.cs",
+              "DocumentMoniker": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\BLL\\Services\\GuestService.cs",
+              "RelativeDocumentMoniker": "..\\BLL\\Services\\GuestService.cs",
+              "ToolTip": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\BLL\\Services\\GuestService.cs",
+              "RelativeToolTip": "..\\BLL\\Services\\GuestService.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAswEQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T19:20:37.028Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Guest.cs",
+              "DocumentMoniker": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\DAL\\Model\\Guest.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\Model\\Guest.cs",
+              "ToolTip": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\DAL\\Model\\Guest.cs",
+              "RelativeToolTip": "..\\DAL\\Model\\Guest.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T17:43:13.933Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "RoomDTO.cs",
+              "DocumentMoniker": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\BLL\\DTos\\RoomDTO.cs",
+              "RelativeDocumentMoniker": "..\\BLL\\DTos\\RoomDTO.cs",
+              "ToolTip": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\BLL\\DTos\\RoomDTO.cs",
+              "RelativeToolTip": "..\\BLL\\DTos\\RoomDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T16:55:01.406Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "GuestDTO.cs",
+              "DocumentMoniker": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\BLL\\DTos\\GuestDTO.cs",
+              "RelativeDocumentMoniker": "..\\BLL\\DTos\\GuestDTO.cs",
+              "ToolTip": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\BLL\\DTos\\GuestDTO.cs",
+              "RelativeToolTip": "..\\BLL\\DTos\\GuestDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T19:10:17.557Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "WebApiConfig.cs",
+              "DocumentMoniker": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\Hotel_management_system\\App_Start\\WebApiConfig.cs",
+              "RelativeDocumentMoniker": "App_Start\\WebApiConfig.cs",
+              "ToolTip": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\Hotel_management_system\\App_Start\\WebApiConfig.cs",
+              "RelativeToolTip": "App_Start\\WebApiConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T21:08:36.91Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "BookingDTO.cs",
+              "DocumentMoniker": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\BLL\\DTos\\BookingDTO.cs",
+              "RelativeDocumentMoniker": "..\\BLL\\DTos\\BookingDTO.cs",
+              "ToolTip": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\BLL\\DTos\\BookingDTO.cs",
+              "RelativeToolTip": "..\\BLL\\DTos\\BookingDTO.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T19:09:47.947Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RoomService.cs",
+              "DocumentMoniker": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\BLL\\Services\\RoomService.cs",
+              "RelativeDocumentMoniker": "..\\BLL\\Services\\RoomService.cs",
+              "ToolTip": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\BLL\\Services\\RoomService.cs",
+              "RelativeToolTip": "..\\BLL\\Services\\RoomService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T15:51:22.074Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\BLL\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\BLL\\Class1.cs",
+              "ToolTip": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\BLL\\Class1.cs",
+              "RelativeToolTip": "..\\BLL\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T14:31:51.935Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "BookingRepo.cs",
+              "DocumentMoniker": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\DAL\\Repos\\BookingRepo.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\Repos\\BookingRepo.cs",
+              "ToolTip": "C:\\Users\\shadm\\Desktop\\Semister\\Project\\DAL\\Repos\\BookingRepo.cs",
+              "RelativeToolTip": "..\\DAL\\Repos\\BookingRepo.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T18:48:56.173Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

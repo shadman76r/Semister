@@ -1,0 +1,15 @@
+C:\Users\shadm\Desktop\Semister\Final_Project\DAL\bin\Debug\DAL.dll.config
+C:\Users\shadm\Desktop\Semister\Final_Project\DAL\bin\Debug\DAL.dll
+C:\Users\shadm\Desktop\Semister\Final_Project\DAL\bin\Debug\DAL.pdb
+C:\Users\shadm\Desktop\Semister\Final_Project\DAL\bin\Debug\EntityFramework.dll
+C:\Users\shadm\Desktop\Semister\Final_Project\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\shadm\Desktop\Semister\Final_Project\DAL\bin\Debug\EntityFramework.xml
+C:\Users\shadm\Desktop\Semister\Final_Project\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\shadm\Desktop\Semister\Final_Project\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\shadm\Desktop\Semister\Final_Project\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\shadm\Desktop\Semister\Final_Project\DAL\obj\Debug\DAL.csproj.Up2Date
+C:\Users\shadm\Desktop\Semister\Final_Project\DAL\obj\Debug\DAL.dll
+C:\Users\shadm\Desktop\Semister\Final_Project\DAL\obj\Debug\DAL.pdb
+C:\Users\shadm\Desktop\Semister\Final_Project\DAL\obj\Debug\DAL.Migrations.InitDb.resources
+C:\Users\shadm\Desktop\Semister\Final_Project\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+C:\Users\shadm\Desktop\Semister\Final_Project\DAL\obj\Debug\DAL.Migrations.InitDb1.resources
