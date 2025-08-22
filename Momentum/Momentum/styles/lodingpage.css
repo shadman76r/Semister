@@ -3,8 +3,14 @@
     background-position: center;
     background-repeat: no-repeat;
     margin: 0 auto;
-width: 1921px;
-height: 773px;
-
-
+    background-size: cover;
+    height: 773px;
+}
+.bg_head{
+    background-image: url('../Momentum/images/Group\ 41749.png');
+     background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    background-size: cover;
+    height: 1391px;
 }
