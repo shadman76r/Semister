@@ -342,3 +342,716 @@ INSERT INTO Can_Use (Payment_ID, Payment_Type_Code) VALUES (23, 5);
 
 
 SELECT * FROM Can_Use ;
+
+--plsql
+-------------------------variable type-------------------------------------
+
+--1
+
+
+-- Project: Outdoor Sports Management System
+-- Semester: Summer 2025
+-- Course Name: Advance Database Management Systems
+-- Section: A
+
+DECLARE
+    v_total_amount NUMBER(10, 2);
+BEGIN
+    SELECT SUM(p.Amount) INTO v_total_amount
+    FROM Payment p
+    JOIN Can_Have ch ON p.Payment_ID = ch.Payment_ID
+    JOIN Makes m ON ch.Booking_ID = m.Booking_ID
+    WHERE m.Player_ID = 1;
+
+    IF v_total_amount IS NULL THEN
+        v_total_amount := 0;
+    END IF;
+
+    DBMS_OUTPUT.PUT_LINE('Total payment amount for Player ID 1: Tk' || v_total_amount);
+END;
+/
+
+
+--2
+
+-- Project: Outdoor Sports Management System
+-- Semester: Summer 2025
+-- Course Name: Advance Database Management Systems
+-- Section: A
+
+DECLARE
+    v_turf_name VARCHAR2(100);
+    v_booking_count NUMBER;
+BEGIN
+    SELECT t.Turf_Name, COUNT(cbm.Booking_ID)
+    INTO v_turf_name, v_booking_count
+    FROM Turf t
+    LEFT JOIN Can_Be_Made cbm ON t.Turf_ID = cbm.Turf_ID
+    WHERE t.Turf_ID = 1
+    GROUP BY t.Turf_Name;
+
+    DBMS_OUTPUT.PUT_LINE('Turf Name: ' || v_turf_name);
+    DBMS_OUTPUT.PUT_LINE('Number of bookings: ' || v_booking_count);
+END;
+/
+
+
+-------------------operator type -----------------------------------
+--1
+-- Project: Outdoor Sports Management System
+-- Semester: Summer 2025
+-- Course Name: Advance Database Management Systems
+-- Section: A
+DECLARE
+    v_booking_id NUMBER := 1;
+    v_start_time TIMESTAMP;
+    v_end_time TIMESTAMP;
+    v_scheduled_duration NUMBER;
+    v_actual_duration NUMBER;
+    v_overtime_minutes NUMBER;
+    v_late_fee NUMBER := 0;
+BEGIN
+    SELECT Start_Time, End_Time
+    INTO v_start_time, v_end_time
+    FROM Booking
+    WHERE Booking_ID = v_booking_id;
+
+    v_scheduled_duration := (EXTRACT(HOUR FROM (v_end_time - v_start_time)) * 60) +
+                            EXTRACT(MINUTE FROM (v_end_time - v_start_time));
+    
+    v_actual_duration := (EXTRACT(HOUR FROM (SYSTIMESTAMP - v_start_time)) * 60) +
+                         EXTRACT(MINUTE FROM (SYSTIMESTAMP - v_start_time));
+
+    -- Calculate overtime and late fee
+    IF v_actual_duration > v_scheduled_duration THEN
+        v_overtime_minutes := v_actual_duration - v_scheduled_duration;
+        -- Tk120 per hour or part thereof
+        v_late_fee := CEIL(v_overtime_minutes / 60) * 100;
+    END IF;
+
+    -- Output results
+    DBMS_OUTPUT.PUT_LINE('Booking ID: ' || v_booking_id);
+    DBMS_OUTPUT.PUT_LINE('Scheduled Duration: ' || v_scheduled_duration || ' minutes');
+    DBMS_OUTPUT.PUT_LINE('Actual Duration: ' || v_actual_duration || ' minutes');
+    DBMS_OUTPUT.PUT_LINE('Overtime Minutes: ' || NVL(v_overtime_minutes, 0));
+    DBMS_OUTPUT.PUT_LINE('Late Fee: Tk' || v_late_fee);
+END;
+/
+
+
+--2
+-- Project: Outdoor Sports Management System
+-- Semester: Summer 2025
+-- Course Name: Advance Database Management Systems
+-- Section: A
+
+DECLARE
+    v_event_id NUMBER := 1; 
+    v_event_name VARCHAR2(100);
+    v_event_date DATE;
+    v_event_month NUMBER;
+    v_total_revenue NUMBER(10,2) := 0;
+    v_discount_percent NUMBER := 0;
+    v_discounted_revenue NUMBER(10,2);
+BEGIN
+    SELECT Event_Name, Event_Date
+    INTO v_event_name, v_event_date
+    FROM Events
+    WHERE Event_ID = v_event_id;
+
+    v_event_month := EXTRACT(MONTH FROM v_event_date);
+
+    SELECT SUM(p.Amount)
+    INTO v_total_revenue
+    FROM Payment p
+    JOIN Can_Have ch ON p.Payment_ID = ch.Payment_ID
+    JOIN Can_Be_Made cbm ON ch.Booking_ID = cbm.Booking_ID
+    JOIN Participates part ON cbm.Booking_ID = part.Event_ID
+    WHERE part.Event_ID = v_event_id;
+
+    IF v_event_month = 9 THEN
+        v_discount_percent := 15;
+    ELSIF v_event_month = 10 THEN
+        v_discount_percent := 10;
+    ELSE
+        v_discount_percent := 0;
+    END IF;
+
+    v_discounted_revenue := v_total_revenue - (v_total_revenue * v_discount_percent / 100);
+
+    
+    IF v_total_revenue IS NULL THEN
+        v_total_revenue := 0;
+        v_discounted_revenue := 0;
+    END IF;
+
+    DBMS_OUTPUT.PUT_LINE('Event: ' || v_event_name);
+    DBMS_OUTPUT.PUT_LINE('Event Date: ' || TO_CHAR(v_event_date, 'DD-MON-YYYY'));
+    DBMS_OUTPUT.PUT_LINE('Event Month: ' || v_event_month);
+    DBMS_OUTPUT.PUT_LINE('Total Revenue: Tk' || v_total_revenue);
+    DBMS_OUTPUT.PUT_LINE('Discount Percentage: ' || v_discount_percent || '%');
+    DBMS_OUTPUT.PUT_LINE('Discounted Revenue: TK' || v_discounted_revenue);
+END;
+/
+
+
+----single-row--------------
+--1
+-- Project: Outdoor Sports Management System
+-- Semester: Summer 2025
+-- Course Name: Advance Database Management Systems
+-- Section: A
+
+DECLARE
+    v_player_name VARCHAR2(100); 
+BEGIN
+   
+    SELECT UPPER(First_Name || ' ' || Last_Name) 
+    INTO v_player_name
+    FROM Players
+    WHERE Player_ID = 1;
+
+    DBMS_OUTPUT.PUT_LINE('Uppercase Player Name: ' || v_player_name);
+END;
+/
+
+--2
+-- Project: Outdoor Sports Management System
+-- Semester: Summer 2025
+-- Course Name: Advance Database Management Systems
+-- Section: A
+
+DECLARE
+    v_player_age NUMBER;
+BEGIN
+    SELECT ROUND(MONTHS_BETWEEN(SYSDATE, DOB) / 12)
+    INTO v_player_age
+    FROM Players
+    WHERE Player_ID = 1;
+
+    DBMS_OUTPUT.PUT_LINE('Rounded Player Age: ' || v_player_age);
+END;
+/
+
+------------2- Group function type questions:-------------
+
+-- Project: Outdoor Sports Management System
+-- Semester: Summer 2025
+-- Course Name: Advance Database Management Systems
+-- Section: A
+
+DECLARE
+    v_avg_players NUMBER;  
+BEGIN
+    
+    SELECT AVG(player_count) 
+    INTO v_avg_players
+    FROM (SELECT Team_ID, COUNT(*) AS player_count
+          FROM Belongs_To
+          GROUP BY Team_ID);
+    DBMS_OUTPUT.PUT_LINE('Average Number of Players in All Teams: ' || v_avg_players);
+END;
+/
+
+-- Project: Outdoor Sports Management System
+-- Semester: Summer 2025
+-- Course Name: Advance Database Management Systems
+-- Section: A
+
+DECLARE
+    v_total_confirmed NUMBER;   
+BEGIN
+   
+    SELECT COUNT(*) 
+    INTO v_total_confirmed
+    FROM Booking
+    WHERE Status = 'Confirmed';
+
+   
+    DBMS_OUTPUT.PUT_LINE('Total Confirmed Bookings: ' || v_total_confirmed);
+END;
+/
+
+-------loops--------
+
+-- Project: Outdoor Sports Management System
+-- Semester: Summer 2025
+-- Course Name: Advance Database Management Systems
+-- Section: A
+
+DECLARE
+    
+    CURSOR c_players IS
+        SELECT p.First_Name || ' ' || p.Last_Name AS player_name
+        FROM Players p
+        JOIN Belongs_To bt ON p.Player_ID = bt.Player_ID
+        JOIN Team t ON bt.Team_ID = t.Team_ID
+        WHERE t.Team_Name = 'Warriors';
+BEGIN
+    FOR player IN c_players LOOP
+        DBMS_OUTPUT.PUT_LINE('Player Name: ' || player.player_name);
+    END LOOP;
+END;
+/
+
+
+-- Project: Outdoor Sports Management System
+-- Semester: Summer 2025
+-- Course Name: Advance Database Management Systems
+-- Section: A
+
+DECLARE   
+    v_booking_id NUMBER;   
+    v_booking_status VARCHAR2(50); 
+    CURSOR c_bookings IS
+        SELECT Booking_ID, Status
+        FROM Booking
+        WHERE Booking_Date = TO_DATE('2025-08-01', 'YYYY-MM-DD');
+BEGIN
+    OPEN c_bookings;
+    
+    FETCH c_bookings INTO v_booking_id, v_booking_status;
+    
+    WHILE c_bookings%FOUND LOOP
+        DBMS_OUTPUT.PUT_LINE('Booking ID: ' || v_booking_id || ', Status: ' || v_booking_status);
+        FETCH c_bookings INTO v_booking_id, v_booking_status;
+    END LOOP;
+    CLOSE c_bookings;
+END;
+/
+
+
+---------------2 conditional statements -------------------
+
+-- Project: Outdoor Sports Management System
+-- Semester: Summer 2025
+-- Course Name: Advance Database Management Systems
+-- Section: A
+
+DECLARE
+    v_skill_level VARCHAR2(50); 
+BEGIN
+   
+    SELECT Skill_Level
+    INTO v_skill_level
+    FROM Profile
+    JOIN Has_Profile hp ON Profile.Profile_ID = hp.Profile_ID
+    WHERE hp.Player_ID = 1;
+
+    IF v_skill_level = 'Advanced' THEN
+        DBMS_OUTPUT.PUT_LINE('Player is eligible for the event.');
+    ELSE
+        DBMS_OUTPUT.PUT_LINE('Player is not eligible for the event.');
+    END IF;
+END;
+/
+
+
+-- Project: Outdoor Sports Management System
+-- Semester: Summer 2025
+-- Course Name: Advance Database Management Systems
+-- Section: A
+
+DECLARE
+    v_booking_status VARCHAR2(50);  
+    v_booking_date DATE := TO_DATE('2025-08-01', 'YYYY-MM-DD');  
+BEGIN
+    
+    SELECT Status
+    INTO v_booking_status
+    FROM Booking
+    WHERE Booking_Date = v_booking_date;
+
+    IF v_booking_status = 'Confirmed' THEN
+        DBMS_OUTPUT.PUT_LINE('Booking for ' || TO_CHAR(v_booking_date, 'YYYY-MM-DD') || ' is confirmed.');
+    ELSE
+        DBMS_OUTPUT.PUT_LINE('Booking for ' || TO_CHAR(v_booking_date, 'YYYY-MM-DD') || ' is not confirmed.');
+    END IF;
+END;
+/
+
+
+-------------2 subquery ------
+
+-- Project: Outdoor Sports Management System
+-- Semester: Summer 2025
+-- Course Name: Advance Database Management Systems
+-- Section: A
+
+DECLARE
+    v_top_player_id NUMBER; 
+BEGIN
+    
+    SELECT Player_ID
+    INTO v_top_player_id
+    FROM (
+        SELECT Player_ID
+        FROM Belongs_To
+        GROUP BY Player_ID
+        HAVING COUNT(*) = (
+            SELECT MAX(event_count) 
+            FROM (
+                SELECT Player_ID, COUNT(*) AS event_count
+                FROM Belongs_To
+                GROUP BY Player_ID
+            )
+        )
+        ORDER BY COUNT(*) DESC
+    ) WHERE ROWNUM = 1;  --only one row is selected
+
+   
+    DBMS_OUTPUT.PUT_LINE('Top Player ID (Most Event Participation): ' || v_top_player_id);
+END;
+/
+
+-- Project: Outdoor Sports Management System
+-- Semester: Summer 2025
+-- Course Name: Advance Database Management Systems
+-- Section: A
+
+DECLARE
+    v_top_booking_id NUMBER;   
+BEGIN
+   
+    SELECT Booking_ID
+    INTO v_top_booking_id
+    FROM (
+        SELECT Booking_ID, Amount
+        FROM Can_Have ch
+        JOIN Payment p ON ch.Payment_ID = p.Payment_ID
+        WHERE Amount = (SELECT MAX(Amount) FROM Payment)
+    ) WHERE ROWNUM = 1; 
+
+   
+    DBMS_OUTPUT.PUT_LINE('Booking ID (Highest Payment): ' || v_top_booking_id);
+END;
+/
+
+----joining ---------------
+
+-- Project: Outdoor Sports Management System
+-- Semester: Summer 2025
+-- Course Name: Advance Database Management Systems
+-- Section: A
+
+BEGIN
+    FOR r IN (
+        SELECT p.First_Name || ' ' || p.Last_Name AS player_name, pr.Skill_Level
+        FROM Players p
+        JOIN Has_Profile hp ON p.Player_ID = hp.Player_ID
+        JOIN Profile pr ON hp.Profile_ID = pr.Profile_ID
+    ) LOOP
+        DBMS_OUTPUT.PUT_LINE('Player: ' || r.player_name || ' - Skill Level: ' || r.Skill_Level);
+    END LOOP;
+END;
+/
+
+-- Project: Outdoor Sports Management System
+-- Semester: Summer 2025
+-- Course Name: Advance Database Management Systems
+-- Section: A
+
+BEGIN
+    FOR r IN (
+        SELECT b.Booking_ID, t.Turf_location
+        FROM Booking b
+        JOIN Can_Be_Made cbm ON b.Booking_ID = cbm.Booking_ID
+        JOIN Turf t ON cbm.Turf_ID = t.Turf_ID
+    ) LOOP
+        DBMS_OUTPUT.PUT_LINE('Booking ID: ' || r.Booking_ID || ' - Turf Location: ' || r.Turf_location);
+    END LOOP;
+END;
+/
+
+
+---advance code for pl/sql---
+
+--sorted function--
+
+-- Project: Outdoor Sports Management System
+-- Semester: Summer 2025
+-- Course Name: Advance Database Management Systems
+-- Section: A
+
+CREATE OR REPLACE FUNCTION get_skill_level (p_player_id IN NUMBER) 
+RETURN VARCHAR2 IS 
+    v_skill_level VARCHAR2(50);   
+BEGIN
+ 
+    SELECT pr.Skill_Level
+    INTO v_skill_level
+    FROM Profile pr
+    JOIN Has_Profile hp ON pr.Profile_ID = hp.Profile_ID
+    WHERE hp.Player_ID = p_player_id;
+
+    RETURN v_skill_level;
+END get_skill_level;
+/
+--to see the answer
+
+-- Project: Outdoor Sports Management System
+-- Semester: Summer 2025
+-- Course Name: Advance Database Management Systems
+-- Section: A
+
+
+DECLARE
+    v_player_id NUMBER := 1;  
+    v_skill_level VARCHAR2(50);  
+BEGIN    
+    v_skill_level := get_skill_level(v_player_id);
+    DBMS_OUTPUT.PUT_LINE('Skill Level of Player ' || v_player_id || ': ' || v_skill_level);
+END;
+/
+
+--2
+-- Project: Outdoor Sports Management System
+-- Semester: Summer 2025
+-- Course Name: Advance Database Management Systems
+-- Section: A
+
+
+CREATE OR REPLACE FUNCTION get_turf_location (p_booking_id IN NUMBER) 
+RETURN VARCHAR2 IS 
+    v_turf_location VARCHAR2(100);   
+BEGIN
+    
+    SELECT t.Turf_location
+    INTO v_turf_location
+    FROM Turf t
+    JOIN Can_Be_Made cbm ON t.Turf_ID = cbm.Turf_ID
+    WHERE cbm.Booking_ID = p_booking_id;
+    RETURN v_turf_location;
+END get_turf_location;
+/
+
+-- to see the function
+-- Project: Outdoor Sports Management System
+-- Semester: Summer 2025
+-- Course Name: Advance Database Management Systems
+-- Section: A
+
+DECLARE
+    v_booking_id NUMBER := 1;
+    v_turf_location VARCHAR2(100); 
+BEGIN
+  
+    v_turf_location := get_turf_location(v_booking_id);
+    DBMS_OUTPUT.PUT_LINE('Turf Location for Booking ' || v_booking_id || ': ' || v_turf_location);
+END;
+/
+
+--- stored procedures------
+
+-- to see the function
+-- Project: Outdoor Sports Management System
+-- Semester: Summer 2025
+-- Course Name: Advance Database Management Systems
+-- Section: A
+
+CREATE OR REPLACE PROCEDURE update_skill_level (p_player_id IN NUMBER, p_skill_level IN VARCHAR2)  
+IS 
+BEGIN
+ 
+    UPDATE Profile
+    SET Skill_Level = p_skill_level
+    WHERE Profile_ID = (SELECT Profile_ID FROM Has_Profile WHERE Player_ID = p_player_id);
+    
+    COMMIT;
+END update_skill_level;
+/
+
+--test
+
+-- to see the function
+-- Project: Outdoor Sports Management System
+-- Semester: Summer 2025
+-- Course Name: Advance Database Management Systems
+-- Section: A
+
+BEGIN
+    -- Call the procedure to update the skill level of a player
+    update_skill_level(1, 'Advanced');
+END;
+/
+
+--2
+
+-- to see the function
+-- Project: Outdoor Sports Management System
+-- Semester: Summer 2025
+-- Course Name: Advance Database Management Systems
+-- Section: A
+CREATE OR REPLACE PROCEDURE update_booking_status (p_booking_id IN NUMBER, p_status IN VARCHAR2)  
+IS 
+BEGIN
+ 
+    UPDATE Booking
+    SET Status = p_status
+    WHERE Booking_ID = p_booking_id;
+
+    COMMIT;  
+END update_booking_status;
+/
+
+--to test
+-- to see the function
+-- Project: Outdoor Sports Management System
+-- Semester: Summer 2025
+-- Course Name: Advance Database Management Systems
+-- Section: A
+BEGIN
+  
+    update_booking_status(6, 'Confirmed'); 
+END;
+/
+
+----table record -----
+
+-- Project: Outdoor Sports Management System
+-- Semester: Summer 2025
+-- Course Name: Advance Database Management Systems
+-- Section: A
+DECLARE  
+    TYPE player_record_type IS TABLE OF Players%ROWTYPE;    
+    v_players player_record_type;  
+BEGIN
+   
+    SELECT * BULK COLLECT INTO v_players FROM Players;
+    FOR i IN 1..v_players.COUNT LOOP
+        DBMS_OUTPUT.PUT_LINE('Player Name: ' || v_players(i).First_Name || ' ' || v_players(i).Last_Name);
+    END LOOP;
+END;
+/
+
+-- Project: Outdoor Sports Management System
+-- Semester: Summer 2025
+-- Course Name: Advance Database Management Systems
+-- Section: A
+DECLARE
+    TYPE booking_record_type IS TABLE OF Booking%ROWTYPE;
+    
+    v_bookings booking_record_type;  
+BEGIN  
+    SELECT * BULK COLLECT INTO v_bookings FROM Booking;
+    
+    FOR i IN 1..v_bookings.COUNT LOOP
+        DBMS_OUTPUT.PUT_LINE('Booking ID: ' || v_bookings(i).Booking_ID || ' - Status: ' || v_bookings(i).Status);
+    END LOOP;
+END;
+/
+
+---- explicit cursor
+
+-- Project: Outdoor Sports Management System
+-- Semester: Summer 2025
+-- Course Name: Advance Database Management Systems
+-- Section: A
+DECLARE
+
+    CURSOR c_player_bookings IS 
+        SELECT p.Player_ID, b.Booking_ID, b.Status
+        FROM Players p
+        JOIN Belongs_To bt ON p.Player_ID = bt.Player_ID
+        JOIN Can_Make cm ON bt.Team_ID = cm.Team_ID
+        JOIN Booking b ON cm.Booking_ID = b.Booking_ID;
+    
+   
+    v_player_booking c_player_bookings%ROWTYPE;
+BEGIN
+ 
+    OPEN c_player_bookings;
+    
+   
+    LOOP
+        FETCH c_player_bookings INTO v_player_booking;
+        
+      
+        EXIT WHEN c_player_bookings%NOTFOUND;
+        
+    
+        DBMS_OUTPUT.PUT_LINE('Player ID: ' || v_player_booking.Player_ID || ', Booking ID: ' || v_player_booking.Booking_ID || ', Status: ' || v_player_booking.Status);
+    END LOOP;
+    
+    CLOSE c_player_bookings;
+END;
+/
+
+
+
+----Cursor-based record
+
+-- Project: Outdoor Sports Management System
+-- Semester: Summer 2025
+-- Course Name: Advance Database Management Systems
+-- Section: A
+DECLARE
+   
+    TYPE player_rec_type IS RECORD ( 
+        player_id NUMBER, 
+        first_name VARCHAR2(100),
+        last_name VARCHAR2(100)
+    );
+
+    TYPE player_tab_type IS TABLE OF player_rec_type;
+
+    v_players player_tab_type;
+BEGIN
+    SELECT p.Player_ID, p.First_Name, p.Last_Name 
+    BULK COLLECT INTO v_players
+    FROM Players p
+    JOIN Belongs_To bt ON p.Player_ID = bt.Player_ID
+    JOIN Can_Make cm ON bt.Team_ID = cm.Team_ID
+    JOIN Booking b ON cm.Booking_ID = b.Booking_ID
+    WHERE b.Status = 'Confirmed';  
+    FOR i IN 1..v_players.COUNT LOOP
+        DBMS_OUTPUT.PUT_LINE('Player Name: ' || v_players(i).first_name || ' ' || v_players(i).last_name);
+    END LOOP;
+END;
+/
+
+
+-- Project: Outdoor Sports Management System
+-- Semester: Summer 2025
+-- Course Name: Advance Database Management Systems
+-- Section: A
+DECLARE
+   
+    TYPE player_team_rec_type IS RECORD (
+        player_name VARCHAR2(100),
+        team_name VARCHAR2(100)
+    );
+
+    
+    TYPE player_team_tab_type IS TABLE OF player_team_rec_type;
+
+  
+    v_player_teams player_team_tab_type;
+BEGIN
+ 
+    SELECT p.First_Name || ' ' || p.Last_Name AS player_name, t.Team_Name
+    BULK COLLECT INTO v_player_teams
+    FROM Players p
+    JOIN Belongs_To bt ON p.Player_ID = bt.Player_ID
+    JOIN Team t ON bt.Team_ID = t.Team_ID;
+
+    FOR i IN 1..v_player_teams.COUNT LOOP
+        DBMS_OUTPUT.PUT_LINE('Player: ' || v_player_teams(i).player_name || 
+                             ' - Team: ' || v_player_teams(i).team_name);
+    END LOOP;
+END;
+/
+
+---row level trigger
+
+-- Project: Outdoor Sports Management System
+-- Semester: Summer 2025
+-- Course Name: Advance Database Management Systems
+-- Section: A
+CREATE OR REPLACE TRIGGER update_phone_number_trigger
+BEFORE INSERT ON Players
+FOR EACH ROW
+BEGIN
+    :NEW.Phone_Number := UPPER(:NEW.Phone_Number);
+END;
+/
