@@ -1055,3 +1055,54 @@ BEGIN
     :NEW.Phone_Number := UPPER(:NEW.Phone_Number);
 END;
 /
+--extra part that is maybe some thing we need to do 
+--roles
+CREATE USER admin_user IDENTIFIED BY adminpassword;
+CREATE USER player_user IDENTIFIED BY playerpassword;
+CREATE ROLE admin_role;
+CREATE ROLE player_role;
+-- Granting full access on players table
+GRANT SELECT, INSERT, UPDATE, DELETE ON Players TO admin_role;
+
+-- Granting full access on bookings table
+GRANT SELECT, INSERT, UPDATE, DELETE ON Booking TO admin_role;
+
+-- Granting full access on teams table
+GRANT SELECT, INSERT, UPDATE, DELETE ON Team TO admin_role;
+
+-- Granting full access on payments table
+GRANT SELECT, INSERT, UPDATE, DELETE ON Payment TO admin_role;
+
+-- Granting full access on profile table
+GRANT SELECT, INSERT, UPDATE, DELETE ON Profile TO admin_role;
+
+-- Granting full access on turf table
+GRANT SELECT, INSERT, UPDATE, DELETE ON Turf TO admin_role;
+
+-- Granting full access on event table
+GRANT SELECT, INSERT, UPDATE, DELETE ON Events TO admin_role;
+-- Granting view access on their own player record
+GRANT SELECT, UPDATE ON Players TO player_role;
+
+-- Granting view access on their own booking records
+GRANT SELECT, UPDATE ON Booking TO player_role;
+
+-- Granting view access on their own profile
+GRANT SELECT, UPDATE ON Profile TO player_role;
+
+-- Granting view access on the turf table
+GRANT SELECT ON Turf TO player_role;
+
+-- Granting access to view events
+GRANT SELECT ON Events TO player_role;
+
+
+GRANT admin_role TO admin_user;
+GRANT player_role TO player_user;
+GRANT CREATE SESSION, CREATE TABLE, CREATE PROCEDURE, ALTER SYSTEM TO admin_user;
+GRANT CREATE SESSION TO player_user;
+-- Admin user inserting a new player
+INSERT INTO Players (Player_ID, First_Name, Last_Name, DOB, Phone_Number)
+VALUES (player_seq.NEXTVAL, 'Shadman', 'Alam', TO_DATE('1990-01-01', 'YYYY-MM-DD'), '01816604938');
+
+
