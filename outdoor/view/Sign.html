@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="mx-auto container max-w-[360px]">
+    <main class="mt-[140px]">
+        <h1 class="text-center text-5xl font-bold text-[#0C6BC8] mb-8">Sign - Up</h1>
+        <div class="mb-[25px]">
+            <i class="fa-solid fa-user mr-1"></i><input type="text"  placeholder="Username" class="input input-info" />
+        </div>
+        <div class="mb-[25px]">
+            <i class="fa-solid fa-envelope mr-1"></i><input type="text" placeholder="Email Id" class="input input-info" />
+        </div>
+        <div class="mb-[25px]">
+            <i class="fa-solid fa-phone mr-1"></i><input type="text" placeholder="Contact Number" class="input input-info" />
+        </div>
+        <div class="mb-[25px]">
+            <i class="fa-solid fa-key"></i><input type="text" placeholder="New Password" class="input input-info" /><i class="fa-solid fa-eye-slash"></i>
+        </div>
+        <div class="mb-[25px]">
+            <i class="fa-solid fa-key"></i><input type="text" placeholder="Confirm Password" class="input input-info" /><i class="fa-solid fa-eye-slash"></i>
+        </div>
+
+        <button type="button" id="LoginBtn" class="p-5 bg-[#0C6BC8] w-full rounded-2xl text-white text-bold mt-3"><a href="home.html">Sign-Up</a></button>
+
+        <p class="text-center mt-2.5">Do Have Account? <span class="text-[#0C6BC8]"><a href="login.html" id="singnupBtn">Login</a></span></p>
+
+        <p class="text-center mt-[45px] font-semibold">Others Ways to sing-in</p>
+        <img src="../pic/Group 10.png" alt="" class="mx-auto mt-4 mb-4">
+        
+    </main>
+    <script>
+      
+        document.getElementById('singnupBtn').addEventListener('click', function() {
+            window.location.href = "login.html";
+            // alert('Redirecting to login page...');
+        });
+    </script>
+</body>
+</html>

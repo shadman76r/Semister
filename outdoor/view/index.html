@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main-Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body class="mx-auto container max-w-[360px]">
+    <main class="mt-[75px]">
+        <h1 class="text-center text-5xl font-bold text-[#0C6BC8] mb-3.5">MATCH READY PLAY BOLD</h1>
+        <p class="text-center font-semibold">Have Fun with Friends!</p>
+        <img src="../pic/Cricket-bro 1.png" alt="picture">
+        <button type="button" id="getStartedBtn" class="p-5 bg-[#0C6BC8] w-full rounded-4xl text-white text-bold mt-3"><a href="login.html">Get Started</a></button>
+    </main>
+</body>
+<script>
+      
+        document.getElementById('getStartedBtn').addEventListener('click', function() {
+            window.location.href = "login.html";
+            // alert('Redirecting to login page...');
+        });
+    </script>
+</html>
